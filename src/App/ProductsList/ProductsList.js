@@ -7,6 +7,7 @@ const ProductsList = ({
     applyNameFilter,
     applyQuantityFilter,
 }) => {
+    console.log(filterState)
     return (
         <div className="main__products-list">
             <h1 className="main__products-list__title">Products list</h1>
@@ -19,9 +20,6 @@ const ProductsList = ({
                 </form>
             </div>
             <div className="main__products-list_items">
-                {
-                    console.log(filterState.availableQuantity)
-                }
                 {
                     products.filter(product => product.name.includes(`${filterState.name}`)).filter(product => product.count >= filterState.availableQuantity).map(({id, name, imageUrl, count, size, weight}) => (
                         <div className="main__products-list__products-list-item" key={id}>
