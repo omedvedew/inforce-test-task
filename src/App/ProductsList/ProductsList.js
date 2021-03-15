@@ -6,8 +6,9 @@ const ProductsList = ({
     filterState,
     applyNameFilter,
     applyQuantityFilter,
+    deleteItem,
 }) => {
-    console.log(filterState)
+    console.log(filterState);
     return (
         <div className="main__products-list">
             <h1 className="main__products-list__title">Products list</h1>
@@ -21,7 +22,10 @@ const ProductsList = ({
             </div>
             <div className="main__products-list_items">
                 {
-                    products.filter(product => product.name.includes(`${filterState.name}`)).filter(product => product.count >= filterState.availableQuantity).map(({id, name, imageUrl, count, size, weight}) => (
+                    delete products[filterState.toDelete]
+                }
+                {
+                    products.filter(product => product.name.includes(`${filterState.name}`)).filter(product => product.count >= filterState.availableQuantity).map(({id, name, imageUrl, count, size, weight}, i) => (
                         <div className="main__products-list__products-list-item" key={id}>
                             <ProductsListItem
                                 id={id}
@@ -31,6 +35,8 @@ const ProductsList = ({
                                 height={size.height}
                                 width={size.width}
                                 weight={weight}
+                                index={i}
+                                deleteItem={deleteItem}
                             />
                         </div>
                     ))

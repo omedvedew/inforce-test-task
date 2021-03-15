@@ -75,6 +75,7 @@
                 box-shadow: 5px 7px 15px rgba(0, 0, 0, 0.5);
                 padding: 20px;
                 margin: 20px;
+                position: relative;
                 @media (max-width: 1439px) {
                     width: calc(33.3% - 40px);
                 }
@@ -115,7 +116,7 @@
                     margin-bottom: 15px;
                 }
     
-                .mpp_details-btn {
+                .mpp_details-btn, .mpp_delete-btn {
                     display: flex;
                     width: fit-content;
                     margin: 0 auto;
@@ -126,12 +127,29 @@
                     font-size: 16px;
                     transition: all 0.3s;
                     color: black;
+                    margin-bottom: 15px;
                 }
+
+                .mpp_delete-btn {
+                    position: absolute;
+                    top: 15px;
+                    right: -5px;
+                    margin: 0;
+                    transform: scale(0.7);
+                }
+
                 .mpp_details-btn:hover {
                     transition: all 0.3s;
                     transform: scale(1.2);
                     background-color: black;
                     color: white;
+                    cursor: pointer;
+                }
+                .mpp_delete-btn:hover {
+                    transition: all 0.3s;
+                    transform: scale(1) translateX(-20px);
+                    background-color: red;
+                    color: black;
                     cursor: pointer;
                 }
                 .mpp_details-btn:focus {

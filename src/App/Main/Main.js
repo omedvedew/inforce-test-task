@@ -5,6 +5,7 @@ const Main = ({
     filterState,
     applyNameFilter,
     applyQuantityFilter,
+    deleteItem,
 }) => {
     return (
         <div className="main">
@@ -12,6 +13,7 @@ const Main = ({
                 filterState={filterState}
                 applyNameFilter={applyNameFilter}
                 applyQuantityFilter={applyQuantityFilter}
+                deleteItem={deleteItem}
             />
         </div>
     )

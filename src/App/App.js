@@ -30,6 +30,19 @@ class App extends Component {
     }))
   }
 
+  deleteItem = (id) => {
+    // eslint-disable-next-line no-restricted-globals
+    let confirmation = confirm('Do you really want to delete this item?');
+    if (confirmation === true) {
+      this.setState(prevState => ({
+        filterState: {
+          ...prevState.filterState,
+          toDelete: id - 1,
+        },
+      }));
+    };
+  }
+
   render () {
     return (
       <>
@@ -37,6 +50,7 @@ class App extends Component {
           filterState={this.state.filterState}
           applyNameFilter={this.applyNameFilter}
           applyQuantityFilter={this.applyQuantityFilter}
+          deleteItem={this.deleteItem}
         />
       </>
     )

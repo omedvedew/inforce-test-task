@@ -8,10 +8,12 @@ const ProductsListItem = ({
     width,
     height,
     weight,
+    index,
+    deleteItem,
 }) => {
-    
     return (
         <>
+            <button className="mpp_delete-btn" onClick={() => deleteItem(id)}>delete this item</button>
             <h3 className="mpp_title">{name}</h3>
             <img className="mpp_photo" src={imageUrl} alt={'nth(' + id + ') image'}></img>
             <div className="mpp_description">This is a high quality product with: 
