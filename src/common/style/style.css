@@ -1,3 +1,85 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
 
+.main {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+}
+.main .main__products-list {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 100px 50px;
+}
+.main .main__products-list .main__products-list__title {
+  display: flex;
+  width: fit-content;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.main .main__products-list .main__products-list__products-list-item {
+  display: flex;
+  width: 20%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 7px 15px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  margin: 20px;
+}
+.main .main__products-list .main__products-list__products-list-item .mpp_title {
+  margin-bottom: 15px;
+}
+.main .main__products-list .main__products-list__products-list-item .mpp_photo {
+  display: flex;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+.main .main__products-list .main__products-list__products-list-item .mpp_description {
+  font-size: 14px;
+  margin-bottom: 15px;
+  line-height: 18px;
+}
+.main .main__products-list .main__products-list__products-list-item .mpp_quantity-available {
+  margin-bottom: 15px;
+}
+.main .main__products-list .main__products-list__products-list-item .mpp_details-btn {
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 5px 10px;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.3s;
+  color: black;
+}
+.main .main__products-list .main__products-list__products-list-item .mpp_details-btn:hover {
+  transition: all 0.3s;
+  transform: scale(1.2);
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+.main .main__products-list .main__products-list__products-list-item .mpp_details-btn:focus {
+  outline: none;
+}
 
 /*# sourceMappingURL=style.css.map */
