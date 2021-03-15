@@ -1,10 +1,18 @@
 import React from 'react';
 import ProductsList from '../ProductsList/ProductsList';
 
-const Main = () => {
+const Main = ({
+    filterState,
+    applyNameFilter,
+    applyQuantityFilter,
+}) => {
     return (
         <div className="main">
-            <ProductsList/>
+            <ProductsList
+                filterState={filterState}
+                applyNameFilter={applyNameFilter}
+                applyQuantityFilter={applyQuantityFilter}
+            />
         </div>
     )
 };

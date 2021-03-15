@@ -13,7 +13,7 @@ const ProductsListItem = ({
     return (
         <>
             <h3 className="mpp_title">{name}</h3>
-            <img className="mpp_photo" src={imageUrl}></img>
+            <img className="mpp_photo" src={imageUrl} alt={'nth(' + id + ') image'}></img>
             <div className="mpp_description">This is a high quality product with: 
                 <p>sizes: {width}mm * {height}mm;</p>  
                 <p>weight: {weight}.</p> 
