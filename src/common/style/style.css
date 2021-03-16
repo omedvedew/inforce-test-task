@@ -184,6 +184,12 @@
   width: 100%;
   flex-direction: row;
   justify-content: flex-start;
+  margin: 0;
+}
+@media (max-width: 1023px) {
+  .main .main__products-list .main__products-list_items .mppi_extended {
+    flex-direction: column;
+  }
 }
 .main .main__products-list .main__products-list_items .mppi_extended .mpp_product {
   width: 30%;
@@ -193,11 +199,23 @@
   flex-direction: column;
   width: 70%;
 }
+@media (max-width: 1023px) {
+  .main .main__products-list .main__products-list_items .mppi_extended .mpp_comments {
+    width: 100%;
+  }
+}
 .main .main__products-list .main__products-list_items .mppi_extended .mpp_comments .mpp_comments_title {
   margin-bottom: 15px;
 }
 .main .main__products-list .main__products-list_items .mppi_extended .mpp_comments .mpp_ct_comment {
   display: flex;
+}
+@media (max-width: 1023px) {
+  .main .main__products-list .main__products-list_items .mppi_extended .mpp_comments .mpp_ct_comment {
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+  }
 }
 .main .main__products-list .main__products-list_items .mppi_extended .mpp_comments .mpp_ct_comment .comments {
   display: flex;
@@ -206,10 +224,39 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
+@media (max-width: 1023px) {
+  .main .main__products-list .main__products-list_items .mppi_extended .mpp_comments .mpp_ct_comment .comments {
+    width: 100%;
+  }
+}
+.main .main__products-list .main__products-list_items .mppi_extended .mpp_comments .mpp_ct_comment .comments .mapping-container {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: fit-content;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 15px;
+}
+@media (max-width: 1023px) {
+  .main .main__products-list .main__products-list_items .mppi_extended .mpp_comments .mpp_ct_comment .comments .mapping-container {
+    width: 100%;
+  }
+  .main .main__products-list .main__products-list_items .mppi_extended .mpp_comments .mpp_ct_comment .comments .mapping-container div {
+    width: 100%;
+  }
+}
 .main .main__products-list .main__products-list_items .mppi_extended .mpp_comments .mpp_ct_comment form {
   display: flex;
   flex-direction: column;
   width: 30%;
+}
+@media (max-width: 1023px) {
+  .main .main__products-list .main__products-list_items .mppi_extended .mpp_comments .mpp_ct_comment form {
+    width: 100%;
+  }
 }
 .main .main__products-list .main__products-list_items .mppi_extended .mpp_comments .mpp_ct_comment form textarea {
   width: 100%;

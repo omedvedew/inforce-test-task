@@ -52,19 +52,8 @@ const ProductPageComment = () => {
             <div className="comments">
                 {
                     comments.map((item, i) => (
-                        <div 
-                            key={i} 
-                            style={{
-                                display: "flex",
-                                flexDirection: "column",
-                                width: "300px",
-                                height: "fit-content",
-                                padding: "5px",
-                                border: "1px solid black",
-                                borderRadius: "5px",
-                                boxShadow: "3px 5px 10px rgba(0, 0, 0, 0.5)",
-                                marginBottom: "15px",
-                            }}
+                        <div className="mapping-container" 
+                            key={i}
                         >
                             <div 
                                 style={{
