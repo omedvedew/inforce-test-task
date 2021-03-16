@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 import products from './products';
 import ProductsListItem from './ProductsListItem';
 
@@ -21,9 +22,12 @@ const ProductsList = ({
         products.push(newProduct);
     }
 
-    delete products[filterState.toDelete];
+    if (filterState.toDelete !== undefined) {
+        products.splice(filterState.toDelete, 1);
+        console.log(`deleted ${products[filterState.toDelete + 1]}`)
+    }
 
-    console.log(filterState);
+    console.log(filterState.toDelete);
     console.log(newProduct);
     console.log(products);
 
