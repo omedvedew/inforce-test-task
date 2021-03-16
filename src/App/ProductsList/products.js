@@ -69,8 +69,16 @@ const products = [
             height: 300
         },
         weight: '310g',
-        comments: [Comment, Comment]
-    }, 
+        comments: [Comment]
+    },
 ];
+
+
+export const getProductsObject = array => {
+    return array.reduce((obj, product) => ({
+        ...obj,
+        [product.id]: product,
+    }), {});
+}
 
 export default products;

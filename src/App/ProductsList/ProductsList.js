@@ -10,6 +10,7 @@ const ProductsList = ({
     applyQuantityFilter,
     deleteItem,
     newAddedProduct,
+    getProductPageState,
 }) => {
 
     let newProduct = newAddedProduct;
@@ -52,6 +53,7 @@ const ProductsList = ({
                                 weight={weight}
                                 index={i}
                                 deleteItem={deleteItem}
+                                getProductPageState={getProductPageState}
                             />
                         </div>
                     ))

@@ -159,6 +159,18 @@ class App extends Component {
     e.preventDefault();
   }
 
+  getProductPageState = (id) => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+    this.setState(() => ({
+      productPageState: {
+        index: id,
+      }
+    }));
+  } 
+
   render () {
     return (
       <>
@@ -172,6 +184,8 @@ class App extends Component {
           newAddedProduct={this.state.newAddedProduct}
           applyNewProduct={this.applyNewProduct}
           denyNewProduct={this.denyNewProduct}
+          getProductPageState={this.getProductPageState}
+          productPageState={this.state.productPageState}
         />
       </>
     )

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import AddItem from '../ProductsList/AddItem';
+import ProductPage from '../ProductsList/ProductPage';
 import ProductsList from '../ProductsList/ProductsList';
 
 const Main = ({
@@ -13,6 +14,8 @@ const Main = ({
     newAddedProduct,
     applyNewProduct,
     denyNewProduct,
+    getProductPageState,
+    productPageState,
 }) => {
     return (
         <div className="main">
@@ -23,6 +26,7 @@ const Main = ({
                     applyQuantityFilter={applyQuantityFilter}
                     deleteItem={deleteItem}
                     newAddedProduct={newAddedProduct}
+                    getProductPageState={getProductPageState}
                     />
                 }
             />
@@ -32,6 +36,12 @@ const Main = ({
                         addNewItem={addNewItem}
                         applyNewProduct={applyNewProduct}
                         denyNewProduct={denyNewProduct}
+                    />
+                }
+            />
+            <Route path="/product_page" render={() =>
+                    <ProductPage
+                        productPageState={productPageState}
                     />
                 }
             />

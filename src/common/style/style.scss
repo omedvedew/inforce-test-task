@@ -144,6 +144,7 @@
                     border: 1px solid black;
                     border-radius: 5px;
                     font-size: 16px;
+                    text-decoration: none;
                     transition: all 0.3s;
                     color: black;
                     margin-bottom: 15px;
@@ -177,6 +178,83 @@
                     outline: none;
                 }
             }
+
+            .mppi_extended {
+                width: 100%;
+                flex-direction: row;
+                justify-content: flex-start;
+                
+                .mpp_product {
+                    width: 30%;
+                }
+                .mpp_comments {
+                    display: flex;
+                    flex-direction: column;
+                    width: 70%;
+
+                    .mpp_comments_title {
+                        margin-bottom: 15px;
+                    }
+
+                    .mpp_ct_comment {
+                        display: flex;
+
+                        .comments {
+                            display: flex;
+                            flex-direction: column;
+                            width: 70%;
+                            align-items: flex-start;
+                            justify-content: flex-start;
+                        }
+                        form {
+                            display: flex;
+                            flex-direction: column;
+                            width: 30%;
+
+                            textarea {
+                                width: 100%;
+                                padding: 10px;
+                                margin-bottom: 15px;
+                            }
+
+                            button {
+                                display: flex;
+                                width: fit-content;
+                                margin: 0 auto;
+                                padding: 5px 10px;
+                                background-color: transparent;
+                                border: 1px solid black;
+                                border-radius: 5px;
+                                font-size: 16px;
+                                text-decoration: none;
+                                transition: all 0.3s;
+                                color: black;
+                                margin-bottom: 15px;
+                            }
+                            button:focus {
+                                outline: none;
+                            }
+                            button:hover {
+                                transition: all 0.3s;
+                                transform: scale(1.2);
+                                box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+
+        a {
+            color: black;
+            transition: all 0.3s;
+            margin-bottom: 15px;
+        }
+        a:hover {
+            transition: all 0.3s;
+            text-shadow: 3px 5px 5px rgba(0, 0, 0, 0.5);
         }
     }
 

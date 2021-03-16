@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ProductsListItem = ({
     id,
@@ -10,6 +11,7 @@ const ProductsListItem = ({
     weight,
     index,
     deleteItem,
+    getProductPageState,
 }) => {
     return (
         <>
@@ -21,7 +23,7 @@ const ProductsListItem = ({
                 <p>weight: {weight}.</p> 
             </div>
             <div className="mpp_quantity-available">Available quantity: {count}</div>
-            <button className="mpp_details-btn">details</button>
+            <Link to='/product_page' className="mpp_details-btn" onClick={() => getProductPageState(index)}>details</Link>
         </>
     )
 };
