@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import products from './products';
 import ProductsListItem from './ProductsListItem';
 
@@ -7,8 +8,25 @@ const ProductsList = ({
     applyNameFilter,
     applyQuantityFilter,
     deleteItem,
+    newProductState,
+    newAddedProduct,
 }) => {
     console.log(filterState);
+
+    let newProduct = newAddedProduct;
+    
+    if (Object.keys(newProduct).length > 1 && products.includes(newProduct) === false) {
+        let newId = Object.keys(products).length + 1;
+        newProduct.id = newId;
+        products.push(newProduct);
+    }
+
+    delete products[filterState.toDelete];
+
+    console.log(filterState);
+    console.log(newProduct);
+    console.log(products);
+
     return (
         <div className="main__products-list">
             <h1 className="main__products-list__title">Products list</h1>
@@ -20,10 +38,9 @@ const ProductsList = ({
                     <input type="text" onChange={applyQuantityFilter} placeholder="enter requested quantity here"></input>
                 </form>
             </div>
+            <Link to="/add-new-item" className="main__add-new-item-btn">Add new item</Link>
             <div className="main__products-list_items">
-                {
-                    delete products[filterState.toDelete]
-                }
+                
                 {
                     products.filter(product => product.name.includes(`${filterState.name}`)).filter(product => product.count >= filterState.availableQuantity).map(({id, name, imageUrl, count, size, weight}, i) => (
                         <div className="main__products-list__products-list-item" key={id}>
@@ -41,6 +58,7 @@ const ProductsList = ({
                         </div>
                     ))
                 }
+                
             </div>
         </div>       
     )

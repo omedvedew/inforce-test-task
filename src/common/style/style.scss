@@ -54,6 +54,25 @@
                 }
             }
         }
+
+        .main__add-new-item-btn {
+            display: flex;
+            width: fit-content;
+            text-decoration: none;
+            color: black;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin: 15px;
+            transition: all 0.3s;
+        }
+        .main__add-new-item-btn:hover {
+            transition: all 0.3s;
+            transform: scale(1.2);
+            background-color: rgb(50, 205, 50);
+            box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
         .main__products-list_items {
             display: flex;
             width: 100%;
@@ -143,6 +162,7 @@
                     transform: scale(1.2);
                     background-color: black;
                     color: white;
+                    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
                     cursor: pointer;
                 }
                 .mpp_delete-btn:hover {
@@ -150,12 +170,22 @@
                     transform: scale(1) translateX(-20px);
                     background-color: red;
                     color: black;
+                    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
                     cursor: pointer;
                 }
                 .mpp_details-btn:focus {
                     outline: none;
                 }
             }
+        }
+    }
+
+    .main__add-item-page {
+        display: flex;
+
+        .main__add-item-page__form {
+            display: flex;
+            flex-direction: column;
         }
     }
 }
