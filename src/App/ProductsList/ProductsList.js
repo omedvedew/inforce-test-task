@@ -9,10 +9,8 @@ const ProductsList = ({
     applyNameFilter,
     applyQuantityFilter,
     deleteItem,
-    newProductState,
     newAddedProduct,
 }) => {
-    console.log(filterState);
 
     let newProduct = newAddedProduct;
     
@@ -26,10 +24,6 @@ const ProductsList = ({
         products.splice(filterState.toDelete, 1);
         console.log(`deleted ${products[filterState.toDelete + 1]}`)
     }
-
-    console.log(filterState.toDelete);
-    console.log(newProduct);
-    console.log(products);
 
     return (
         <div className="main__products-list">

@@ -5,10 +5,12 @@ const AddItem = ({
     newProductState,
     addNewItem,
     applyNewProduct,
+    denyNewProduct,
 }) => {
     return (
         <div className="main__add-item-page">
-            <form className="main__add-item-page__form" onSubmit={applyNewProduct}>
+            <h2 className="main__add-item-page__title">Add new item page</h2>
+            <form className="main__add-item-page__form" onSubmit={applyNewProduct} onReset={denyNewProduct}>
                 <div className="maf_field">
                     Name:
                     <input type="text" value={newProductState.name} placeholder="enter product name here" onChange={addNewItem.newName}></input>
@@ -19,7 +21,7 @@ const AddItem = ({
                 </div>
                 <div className="maf_field">
                     Available quantity:
-                    <input type="text" value={newProductState.count} placeholder="enter product available quantity here" onChange={addNewItem.newCount}></input>
+                    <input type="text" value={newProductState.count} placeholder="enter available quantity here" onChange={addNewItem.newCount}></input>
                 </div>
                 <div className="maf_field">
                     Sizes:
@@ -30,7 +32,10 @@ const AddItem = ({
                     Weight:
                     <input type="text" value={newProductState.weight} placeholder="enter product weight here" onChange={addNewItem.newWeight}></input>
                 </div>
-                <button type="submit"><Link to="/">Back</Link></button>
+                <button className="maf_btn maf_btn-submit" type="submit">add product</button>
+                <button className="maf_btn maf_btn-cancel" type="reset">cancel</button>
+
+                <Link to="/">Back to products</Link>
                 
             </form>
         </div>

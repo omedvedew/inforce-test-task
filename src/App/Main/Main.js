@@ -12,6 +12,7 @@ const Main = ({
     addNewItem,
     newAddedProduct,
     applyNewProduct,
+    denyNewProduct,
 }) => {
     return (
         <div className="main">
@@ -30,6 +31,7 @@ const Main = ({
                         newProductState={newProductState}
                         addNewItem={addNewItem}
                         applyNewProduct={applyNewProduct}
+                        denyNewProduct={denyNewProduct}
                     />
                 }
             />

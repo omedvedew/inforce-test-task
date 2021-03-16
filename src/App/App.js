@@ -131,19 +131,35 @@ class App extends Component {
         ...prevState.newProductState,
         name: '',
         imageUrl: '',
-        count: 0,
+        count: '',
         size: {
-          width: 0,
-          height: 0,
+          width: '',
+          height: '',
         },
-        weight: 0,
+        weight: '',
+      }
+    }));
+    e.preventDefault();
+  }
+
+  denyNewProduct = (e) => {
+    this.setState(prevState => ({
+      newProductState: {
+        ...prevState.newProductState,
+        name: '',
+        imageUrl: '',
+        count: '',
+        size: {
+          width: '',
+          height: '',
+        },
+        weight: '',
       }
     }));
     e.preventDefault();
   }
 
   render () {
-    console.log(this.state.newProductState)
     return (
       <>
         <Main
@@ -155,6 +171,7 @@ class App extends Component {
           addNewItem={this.addNewItem}
           newAddedProduct={this.state.newAddedProduct}
           applyNewProduct={this.applyNewProduct}
+          denyNewProduct={this.denyNewProduct}
         />
       </>
     )
